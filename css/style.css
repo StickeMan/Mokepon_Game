@@ -1,0 +1,202 @@
+/*
+-el # es para cuando haya una identificación.
+-el . es para cuando haya una clase.
+*/
+
+body {
+    /*background-image: url("https://picfiles.alphacoders.com/586/586625.jpg");*/
+    /*background-image: url(../image/battle.jpg);*/
+    background-color: #b9769c;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Clase*/
+.title {
+    color: yellow;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    margin: 80px auto;
+    font-family: CrashBandicootTitle, serif;
+    font-size: 70px;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(-30deg);
+    -webkit-transform: rotateX(-20deg) rotateY(-30deg);
+
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.subtitle {
+    color: #ffffff;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    font-family: CrashBandicootText, serif;
+    font-size: 18px;
+}
+@keyframes spin {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+@font-face {
+    font-family: CrashBandicootTitle;
+    src: url(../fonts/crash-bandicoot-wumpa.ttf);
+}
+
+@font-face {
+    font-family: CrashBandicootText;
+    src: url(../fonts/roquette-std.otf);
+}
+
+#select-pet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards, .cards-attacks {
+    display: flex;
+    gap: 20px
+}
+
+#button-fire {
+    color: #CD0404;
+}
+#button-earth {
+    color: #C58940;
+}
+#button-water {
+    color: #1C82AD;
+}
+
+.card-mokepon {
+    width: 280px;
+    height: 140px;
+    background: #863A6F;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-mokepon img {
+    width: 80px;
+}
+
+#select-pet label {
+    font-family: CrashBandicootText, fantasy;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    color: #FFADBC;
+    cursor: pointer;
+}
+
+#select-pet input {
+    display: none;
+}
+
+#select-pet input:checked + label{
+    background-color: #820000;
+}
+
+#select-pet button {
+    font-family: CrashBandicootTitle, serif;
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: black;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#select-attack {
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-attack {
+    font-family: CrashBandicootText, fantasy;
+    background: #863A6F;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 140px;
+    height: 80px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#messages {
+    font-family: CrashBandicootText, fantasy;
+    color: white;
+    width: 200px;
+    background-color: #820000;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#button-restart {
+    font-family: CrashBandicootTitle, serif;
+    border: none;
+    color: #000000;
+}
+
+.attacks {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    color: white;
+}
+
+#lives-player, #lives-enemy {
+    font-family: CrashBandicootTitle, serif;
+    font-size: 32px;
+    margin-bottom: 0;
+    color: yellow;
+}
+
+.attacks-player, .attacks-enemy {
+    font-family: CrashBandicootText, fantasy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+#pet-player, #pet-enemy {
+    color: black;
+}
+
+@media (max-width: 360px) {
+    .cards, .cards-attacks {
+        flex-direction: column;
+    }
+}

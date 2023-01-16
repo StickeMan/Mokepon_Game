@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOKEPON GAME</title>
+    <link rel="shortcut icon" href="../image/estacion-de-juegos.png">
+    <script src="../js/mokepon.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<section id="select-pet">
+    <h1 class="title">MOKEPON!</h1>
+
+    <h2 class="subtitle">choose your pet:</h2>
+
+    <div class="cards">
+        <input type="radio" name="pet" id="Hipodoge"/>
+        <label class="card-mokepon" for="Hipodoge">
+            <p>Hipodoge</p>
+            <img src="../image/hipodoge_attack.png" alt="Hipodoge">
+        </label>
+
+        <input type="radio" name="pet" id="Capipepo"/>
+        <label class="card-mokepon" for="Capipepo">
+            <p>Capipepo</p>
+            <img src="../image/capipepo_attack.png" alt="Capipepo">
+        </label>
+
+        <input type="radio" name="pet" id="Ratigueya"/>
+        <label class="card-mokepon" for="Ratigueya">
+            <p>Ratigueya</p>
+            <img src="../image/ratigueya_attack.png" alt="Ratigueya">
+        </label>
+    </div>
+
+    <button id="button-pet">Select</button>
+</section>
+
+<section id="select-attack">
+    <h1 class="title">MOKEPON!</h1>
+
+    <h2 class="subtitle">Choose your attack:</h2>
+
+    <div class="cards-attacks">
+        <button id="button-fire" class="button-attack"> Fire 🔥</button>
+        <button id="button-water" class="button-attack"> Water 💧</button>
+        <button id="button-earth" class="button-attack"> Earth 🌱</button>
+    </div>
+
+    <div id="messages">
+        <p id="result">Good Luck</p>
+
+        <section id="restart">
+            <button id="button-restart">Restart</button>
+        </section>
+    </div>
+
+    <div class="attacks">
+        <div class="attacks-player">
+            <p id="lives-player">3</p>
+            <p id="pet-player"></p>
+            <div id="player-attack"></div>
+        </div>
+        <div class="attacks-enemy">
+            <p id="lives-enemy">3</p>
+            <p id="pet-enemy"></p>
+            <div id="enemy-attack"></div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
